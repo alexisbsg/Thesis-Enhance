@@ -1,0 +1,20 @@
+# Dataset files — keep local until licensing is verified
+*.csv
+
+# Python cache and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Local editor and runtime files
+.vscode/
+runtime/
+artifacts/latest/
+*.sqlite3
+*.log

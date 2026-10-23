@@ -1,0 +1,9 @@
+{
+  "selection_metric": "macro_f1",
+  "cross_validation_splits": 3,
+  "cross_validation_repeats": 1,
+  "stability_seeds": [42, 7, 21, 100, 2026],
+  "sensitivity_alphas": [0.005, 0.01, 0.02],
+  "sensitivity_repetitions": 10
+}
+

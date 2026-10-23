@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "id3-hematological"
+version = "1.2.0"
+description = "Research MVP for explainable numerical ID3 classification of CBC records"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.1,<3",
+  "numpy>=1.26,<3",
+  "scikit-learn>=1.4,<2",
+  "streamlit==1.66.1",
+  "Pillow>=10,<13",
+  "pytesseract>=0.3.10,<1",
+  "pypdf>=4,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.8,<1", "mypy>=1.13,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
